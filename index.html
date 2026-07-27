@@ -1,12 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>TS-LIMITS</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TS-LIMITS — NeurIPS 2026 Workshop</title>
+<meta name="description" content="Generalization for Time Series in Tight Settings: Latency, Inference, Memory, prIvacy and Sustainability. A NeurIPS 2026 Workshop.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>TS-LIMITS</h1>
-  <p>Time series under deployment constraints.</p>
+
+<div class="topbar">
+  <div class="wrap">
+    <div class="brand">TS&#8209;<span>LIMITS</span></div>
+    <nav class="nav">
+      <a href="#about">Overview</a>
+      <a href="#domains">Domains</a>
+      <a href="#cfp">Call for Papers</a>
+      <a href="#topics">Topics</a>
+      <a href="#dates">Dates</a>
+      <a href="#submit">Submit</a>
+      <a href="#organizers">Organizers</a>
+    </nav>
+  </div>
+</div>
+
+<header class="banner">
+  <img class="hero-img" src="banner.jpg" alt="TS-LIMITS @ NeurIPS'26 — Generalization for Time Series in Tight Settings. Banner featuring Paris, Sydney and Atlanta.">
+  <div class="wrap hero-overlay">
+    <h1 class="mobile-title">TS-LIMITS <span>@ NeurIPS'26</span></h1>
+    <p class="full-name"><b>L</b>atency, <b>I</b>nference, <b>M</b>emory, pr<b>I</b>vacy and Sustainability — foundation-model generalization for time series that must run on the edge, in real time, under the supervision and energy budgets that benchmarks never impose.</p>
+    <div class="banner-meta" id="meta-chips"></div>
+    <div class="countdown" id="countdown">
+      <span class="cd-label" id="cd-label"></span>
+      <div class="cd-units" id="cd-units">
+        <div class="cd-unit"><div class="cd-num" id="cd-d">—</div><div class="cd-tag">Days</div></div>
+        <div class="cd-unit"><div class="cd-num" id="cd-h">—</div><div class="cd-tag">Hours</div></div>
+        <div class="cd-unit"><div class="cd-num" id="cd-m">—</div><div class="cd-tag">Min</div></div>
+        <div class="cd-unit"><div class="cd-num" id="cd-s">—</div><div class="cd-tag">Sec</div></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<section class="block" id="about">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-no">01</span><h2>The challenge</h2></div>
+    <div class="lead reveal" id="about-body"></div>
+  </div>
+</section>
+
+<section class="block" id="domains">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-no">02</span><h2>Where the constraints bite</h2></div>
+    <div class="lead reveal" id="domains-intro" style="margin-bottom:26px"></div>
+    <div class="domains reveal" id="domains-grid"></div>
+  </div>
+</section>
+
+<section class="block" id="cfp">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-no">03</span><h2>Call for papers — five bottlenecks</h2></div>
+    <div class="lead reveal" id="cfp-intro" style="margin-bottom:24px"></div>
+    <div class="cfp reveal" id="cfp-rows"></div>
+  </div>
+</section>
+
+<section class="block" id="topics">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-no">04</span><h2>Topics of interest</h2></div>
+    <ul class="topics reveal" id="topics-list"></ul>
+  </div>
+</section>
+
+<section class="block" id="dates">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-no">05</span><h2>Important dates</h2></div>
+    <div class="timeline reveal" id="dates-rows"></div>
+    <p class="note" id="dates-note"></p>
+  </div>
+</section>
+
+<section class="block" id="submit">
+  <div class="wrap">
+    <div class="cta-box reveal">
+      <svg viewBox="0 0 600 200" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M0,120 C80,70 140,160 220,110 C300,60 340,150 440,100 C520,60 560,130 600,105" fill="none" stroke="#6366f1" stroke-opacity=".35" stroke-width="2"/></svg>
+      <div>
+        <h2 id="submit-h"></h2>
+        <p id="submit-p"></p>
+      </div>
+      <a class="btn" id="submit-btn" href="#" onclick="return false;"></a>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="organizers">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-no">06</span><h2>Organizers</h2></div>
+    <div class="org-grid reveal" id="org-grid"></div>
+    <p class="contact" id="org-contact"></p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <div class="footmark">TS-LIMITS · NeurIPS 2026</div>
+      <div style="margin-top:6px;max-width:54ch">Generalization for Time Series in Tight Settings: Latency, Inference, Memory, prIvacy and Sustainability.</div>
+    </div>
+    <div><a href="#about">Overview</a> · <a href="#cfp">Call for Papers</a> · <a href="#submit">Submit</a> · <a href="#" id="foot-email">Email</a></div>
+  </div>
+</footer>
+
+<script src="content.js"></script>
+<script src="render.js"></script>
+
 </body>
 </html>
