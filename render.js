@@ -45,12 +45,44 @@
     btn.removeAttribute('onclick');
   }
 
+  /* ---- initials fallback for missing photos ---- */
+  const initials = (name) => name.replace(/[^\p{L}\s]/gu, '').split(/\s+/)
+    .filter(Boolean).map(w => w[0]).slice(0, 2).join('').toUpperCase();
+  // Show the image; if it's missing or fails to load, reveal the initials placeholder.
+  const photoBlock = (photo, name, cls) =>
+    `<div class="${cls}-photo"><img src="${photo}" alt="${name}" loading="lazy" ` +
+    `onload="this.nextElementSibling.style.display='none';" ` +
+    `onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">` +
+    `<span class="${cls}-ph" style="display:flex;">${initials(name)}</span></div>`;
+
+  /* ---- 05 speakers ---- */
+  $('speakers-grid').innerHTML = CONTENT.speakers.map(s => {
+    const tag = s.status
+      ? `<span class="spk-status ${s.status}">${s.status}</span>` : '';
+    const talk = s.talk ? `<div class="spk-talk">“${s.talk}”</div>` : '';
+    return `<div class="spk">
+      ${photoBlock(s.photo, s.name, 'spk')}
+      <div class="spk-body">
+        <div class="spk-head"><span class="spk-name">${s.name}</span>${tag}</div>
+        <div class="spk-role">${s.role}</div>
+        ${talk}
+        <p class="spk-bio">${s.bio}</p>
+      </div>
+    </div>`;
+  }).join('');
+
   /* ---- 07 organizers ---- */
-  $('org-grid').innerHTML = CONTENT.organizers
-    .map(o => `<div class="org"><div class="name">${o.name}</div><div class="aff">${o.aff}</div></div>`).join('');
+  $('org-grid').innerHTML = CONTENT.organizers.map(o =>
+    `<div class="org">
+      ${photoBlock(o.photo, o.name, 'org')}
+      <div class="org-name">${o.name}</div>
+      <div class="org-aff">${o.aff}</div>
+      ${o.bio ? `<p class="org-bio">${o.bio}</p>` : ''}
+    </div>`).join('');
   const mail = `mailto:${CONTENT.contactEmail}`;
   $('org-contact').innerHTML = `Contact: <a href="${mail}">${CONTENT.contactEmail}</a>`;
   $('foot-email').href = mail;
+  if (CONTENT.tagline) $('tagline').textContent = CONTENT.tagline;
 
   /* ---- scroll reveal ---- */
   const io = new IntersectionObserver((es) => {

@@ -80,14 +80,73 @@ const CONTENT = {
     buttonUrl: "#"   /* <-- paste the OpenReview link here when you have it */
   },
 
-  /* ---- 07 · Organizers ---- */
-  organizers: [
-    { name: "Aurélie Boisbunon", aff: "Ericsson Research France" },
-    { name: "Rémi Emonet", aff: "Lyon University" },
-    { name: "Valerio Frascolla", aff: "Intel Germany" },
-    { name: "Elisa Fromont", aff: "Rennes University" },
-    { name: "Fabio Bonassi", aff: "Uppsala University" },
-    { name: "June Sallou", aff: "Wageningen University" },
+  /* ---- Keynote speakers ----
+     photo: path to an image in the /speakers folder. Add your images there
+     (e.g. speakers/gama.jpg). Leave the filename even before the image exists —
+     a placeholder shows until you upload it.
+     status: "confirmed" or "tentative" (shown as a small tag). */
+  speakers: [
+    {
+      name: "João Gama",
+      role: "Professor, University of Porto",
+      photo: "speakers/gama.jpg",
+      status: "confirmed",
+      talk: "A Neuro-symbolic approach for explaining Rare Events",
+      bio: "A leading figure in ML for dynamic and non-stationary environments, with 30+ years in data stream mining, concept drift detection, and adaptive learning; author of <i>Knowledge Discovery from Data Streams</i>. His talk presents a two-layer online architecture pairing unsupervised autoencoders (detecting outliers, drifts, anomalies, and failures) with supervised rule-based inference for human-interpretable explanations, shown on a real-world predictive-maintenance case study."
+    },
+    {
+      name: "Thea Klæboe Aarrestad",
+      role: "Assistant Professor, ETH Zurich / CERN",
+      photo: "speakers/aarrestad.jpg",
+      status: "confirmed",
+      talk: "Machine Learning at the Edge of Scale and Speed",
+      bio: "A pioneer in ultra-fast ML inference for real-time systems and a core contributor to hls4ml, enabling neural-network deployment on FPGAs with microsecond-level latency for the LHC trigger systems at CERN. Her talk covers low-power, low-latency inference — hardware-aware model design, quantization, sparsity, and HW–SW co-design for compact, energy-efficient AI."
+    },
+    {
+      name: "Paolo Giudici",
+      role: "Professor, University of Pavia",
+      photo: "speakers/giudici.jpg",
+      status: "confirmed",
+      talk: "S.A.F.E. AI evaluation models for time series data",
+      bio: "Originator of the Sustainability, Accuracy, Fairness, Explainability (S.A.F.E.) AI framework and a leading expert in explainable, trustworthy AI for high-stakes domains. His talk presents a mathematically consistent approach to AI risk management grounded in the Lorenz Curve and Gini index, giving commensurable metrics applicable to any model and data type — from credit lending to medical imaging, judicial decisions, and cyber-risk detection."
+    },
+    {
+      name: "Peter Troll",
+      role: "Co-founder & Head of AI, IPercept",
+      photo: "speakers/troll.jpg",
+      status: "tentative",
+      talk: "",
+      bio: "Co-founder and Head of AI at IPercept, developing industrial software for predictive maintenance. He applies research-engineering skills from KTH to design industrial AI products and IIoT systems that help manufacturers understand and predict machine behavior, from embedded hardware to scalable cloud systems."
+    },
+    {
+      name: "Máire O’Neill",
+      role: "Professor, Queen’s University Belfast",
+      photo: "speakers/oneill.jpg",
+      status: "tentative",
+      talk: "",
+      bio: "Fellow of the Royal Academy of Engineering, widely recognized for expertise in cryptography, hardware security, and post-quantum cryptography. Her work is a natural reference for privacy-preserving ML at the edge, where privacy and security must hold under strict computational and memory budgets."
+    }
   ],
-  contactEmail: "aurelie.boibunon@ericsson.com"
+
+  /* ---- 07 · Organizers ----
+     photo: path to an image in the /organizers folder (e.g. organizers/boisbunon.jpg).
+     A placeholder with initials shows until you upload the image. */
+  organizers: [
+    { name: "Aurélie Boisbunon", aff: "Ericsson Research", photo: "organizers/boisbunon.jpg",
+      bio: "AI Researcher applying ML to telecommunication data; brings firsthand experience with real-world deployment constraints. Ph.D. in Applied Mathematics, University of Rouen." },
+    { name: "Rémi Emonet", aff: "Université de Lyon / Jean Monnet", photo: "organizers/emonet.jpg",
+      bio: "Professor at Jean Monnet University and member of the Institut Universitaire de France. Works on Machine Learning, Optimal Transport, and Computer Vision." },
+    { name: "Valerio Frascolla", aff: "Intel Germany", photo: "organizers/frascolla.jpg",
+      bio: "Director of Research and Innovation at Intel. Expertise in wireless systems, HW-optimization of AI/ML, and standardization; 130+ publications and an extensive workshop-organization record." },
+    { name: "Elisa Fromont", aff: "Université de Rennes / IRISA", photo: "organizers/fromont.jpg",
+      bio: "Professor at Université de Rennes, leading the Inria MALT team (Machine Learning with Temporal Constraints). Extensive event-organization record across ECML PKDD, IDA, and ICML." },
+    { name: "Fabio Bonassi", aff: "Uppsala University", photo: "organizers/bonassi.jpg",
+      bio: "Postdoctoral researcher in Machine Learning (Ph.D., Politecnico di Milano). Focuses on deep learning for time series and dynamical-systems identification, including ECG classification." },
+    { name: "June Sallou", aff: "Wageningen University", photo: "organizers/sallou.jpg",
+      bio: "Assistant Professor in Sustainable Software Engineering, leading the Green Computing Track on making scientific software and AI systems more energy-efficient and environmentally responsible." }
+  ],
+  contactEmail: "aurelie.boisbunon@ericsson.com",
+
+  /* ---- Tagline (shown in the organizers section footer) ---- */
+  tagline: "The best time series models can’t run where they’re needed most — let’s fix that."
 };
