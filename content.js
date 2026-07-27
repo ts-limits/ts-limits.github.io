@@ -82,10 +82,12 @@ const CONTENT = {
 
   /* ---- 07 · Organizers ---- */
   organizers: [
-    { name: "Organizer Name", aff: "Ericsson Research" },
-    { name: "Organizer Name", aff: "Affiliation" },
-    { name: "Organizer Name", aff: "Affiliation" },
-    { name: "Organizer Name", aff: "Affiliation" }
+    { name: "Aurélie Boisbunon", aff: "Ericsson Research France" },
+    { name: "Rémi Emonet", aff: "Lyon University" },
+    { name: "Valerio Frascolla", aff: "Intel Germany" },
+    { name: "Elisa Fromont", aff: "Rennes University" },
+    { name: "Fabio Bonassi", aff: "Uppsala University" },
+    { name: "June Sallou", aff: "Wageningen University" },
   ],
   contactEmail: "aurelie.boibunon@ericsson.com"
 };
