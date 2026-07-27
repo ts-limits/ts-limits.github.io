@@ -87,5 +87,5 @@ const CONTENT = {
     { name: "Organizer Name", aff: "Affiliation" },
     { name: "Organizer Name", aff: "Affiliation" }
   ],
-  contactEmail: "ts-limits@googlegroups.com"
+  contactEmail: "aurelie.boibunon@ericsson.com"
 };
