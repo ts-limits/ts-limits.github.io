@@ -15,7 +15,7 @@ const CONTENT = {
   /* ---- Banner overlay ----
      A meta item can optionally include a 'url' — it becomes a link (used for the venue map). */
   meta: [
-    { k: "Venue",            v: "NeurIPS 2026 · Paris", url: "https://www.google.com/maps/search/?api=1&query=2+Place+de+la+Porte+Maillot,+75017+Paris" },
+    { k: "Venue",            v: "NeurIPS 2026 · Paris", url: "" }, /*"https://www.google.com/maps/search/?api=1&query=2+Place+de+la+Porte+Maillot,+75017+Paris" },*/
     { k: "Format",           v: "One-day workshop" },
     { k: "Submissions open", v: "Aug 3, 2026" }
   ],
@@ -75,11 +75,13 @@ const CONTENT = {
 
   /* ---- Venue (shown in the Overview sidebar with an embedded map) ---- */
   venue: {
-    name: "Palais des Congrès de Paris",
-    address: "2 Place de la Porte Maillot, 75017 Paris, France",
+    name: "TBD", /*Palais des Congrès de Paris",*/
+    address: "", /*2 Place de la Porte Maillot, 75017 Paris, France",*/
     /* Google Maps embed URL. This 'q=' form needs no API key. */
-    mapEmbed: "https://www.google.com/maps?q=2+Place+de+la+Porte+Maillot,+75017+Paris&output=embed",
-    mapLink: "https://www.google.com/maps/search/?api=1&query=2+Place+de+la+Porte+Maillot,+75017+Paris"
+    mapEmbed: "https://www.google.com/maps/place/Paris&output=embed",
+    mapLink: "https://www.google.com/maps/search/?api=1&query=Paris"
+    /*mapEmbed: "https://www.google.com/maps?q=2+Place+de+la+Porte+Maillot,+75017+Paris&output=embed",
+    mapLink: "https://www.google.com/maps/search/?api=1&query=2+Place+de+la+Porte+Maillot,+75017+Paris"*/
   },
 
   /* ---- Program / schedule ----
@@ -106,7 +108,7 @@ const CONTENT = {
   /* ---- 06 · Submit ---- */
   submit: {
     heading: "Submit your work",
-    text: "Up to 4 pages plus references, NeurIPS format, double-blind. Non-archival — recent and concurrent submissions welcome.",
+    text: "4 to 7 pages plus references, NeurIPS format, double-blind. Non-archival — recent and concurrent submissions welcome.",
     buttonLabel: "Open call on OpenReview →",
     buttonUrl: "#"   /* <-- paste the OpenReview link here when you have it */
   },
@@ -140,14 +142,6 @@ const CONTENT = {
       status: "confirmed",
       talk: "S.A.F.E. AI evaluation models for time series data",
       bio: "Originator of the Sustainability, Accuracy, Fairness, Explainability (S.A.F.E.) AI framework and a leading expert in explainable, trustworthy AI for high-stakes domains. His talk presents a mathematically consistent approach to AI risk management grounded in the Lorenz Curve and Gini index, giving commensurable metrics applicable to any model and data type — from credit lending to medical imaging, judicial decisions, and cyber-risk detection."
-    },
-    {
-      name: "Peter Troll",
-      role: "Co-founder & Head of AI, IPercept",
-      photo: "speakers/troll.jpg",
-      status: "tentative",
-      talk: "",
-      bio: "Co-founder and Head of AI at IPercept, developing industrial software for predictive maintenance. He applies research-engineering skills from KTH to design industrial AI products and IIoT systems that help manufacturers understand and predict machine behavior, from embedded hardware to scalable cloud systems."
     },
     {
       name: "Máire O’Neill",
