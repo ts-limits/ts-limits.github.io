@@ -78,8 +78,6 @@ const CONTENT = {
     name: "TBD", /*Palais des Congrès de Paris",*/
     address: "", /*2 Place de la Porte Maillot, 75017 Paris, France",*/
     /* Google Maps embed URL. This 'q=' form needs no API key. */
-    mapEmbed: "https://www.google.com/maps/place/Paris&output=embed",
-    mapLink: "https://www.google.com/maps/search/?api=1&query=Paris"
     /*mapEmbed: "https://www.google.com/maps?q=2+Place+de+la+Porte+Maillot,+75017+Paris&output=embed",
     mapLink: "https://www.google.com/maps/search/?api=1&query=2+Place+de+la+Porte+Maillot,+75017+Paris"*/
   },
