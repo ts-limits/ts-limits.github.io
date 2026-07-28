@@ -10,7 +10,7 @@ const CONTENT = {
 
   /* ---- Countdown target: submission deadline ----
      Format: year, month (1-12), day, hour (24h), minute — in AoE (UTC-12). */
-  deadline: { year: 2026, month: 8, day: 20, hour: 23, minute: 59 },
+  deadline: { year: 2026, month: 8, day: 29, hour: 23, minute: 59 },
 
   /* ---- Banner overlay ---- */
   meta: [
@@ -18,7 +18,7 @@ const CONTENT = {
     { k: "Format",           v: "One-day workshop" },
     { k: "Submissions open", v: "Aug 10" }
   ],
-  countdownLabel: "Submission deadline<br>Aug 20, 2026",
+  countdownLabel: "Submission deadline<br>Aug 29, 2026",
 
   /* ---- 01 · The challenge (each string is one paragraph) ---- */
   about: [
@@ -65,7 +65,7 @@ const CONTENT = {
      'hl: true' highlights a row (the hard deadline). */
   dates: [
     { date: "Aug 10, 2026", what: "Submissions open",              tag: "OpenReview" },
-    { date: "Aug 20, 2026", what: "Submission deadline",           tag: "Hard", hl: true },
+    { date: "Aug 29, 2026", what: "Submission deadline",           tag: "Hard", hl: true },
     { date: "Sep 26, 2026", what: "Author notification",           tag: "Decisions" },
     { date: "Oct 24, 2026", what: "Camera-ready deadline",         tag: "Final" },
     { date: "Dec 2026",     what: "Workshop day · NeurIPS 2026",   tag: "Program" }
@@ -75,7 +75,7 @@ const CONTENT = {
   /* ---- 06 · Submit ---- */
   submit: {
     heading: "Submit your work",
-    text: "Up to 4 pages plus references, NeurIPS format, double-blind. Non-archival — recent and concurrent submissions welcome.",
+    text: "4 to 7 pages plus references, NeurIPS format, double-blind. Non-archival — recent and concurrent submissions welcome.",
     buttonLabel: "Open call on OpenReview →",
     buttonUrl: "#"   /* <-- paste the OpenReview link here when you have it */
   },
@@ -109,14 +109,6 @@ const CONTENT = {
       status: "confirmed",
       talk: "S.A.F.E. AI evaluation models for time series data",
       bio: "Originator of the Sustainability, Accuracy, Fairness, Explainability (S.A.F.E.) AI framework and a leading expert in explainable, trustworthy AI for high-stakes domains. His talk presents a mathematically consistent approach to AI risk management grounded in the Lorenz Curve and Gini index, giving commensurable metrics applicable to any model and data type — from credit lending to medical imaging, judicial decisions, and cyber-risk detection."
-    },
-    {
-      name: "Peter Troll",
-      role: "Co-founder & Head of AI, IPercept",
-      photo: "speakers/troll.jpg",
-      status: "tentative",
-      talk: "",
-      bio: "Co-founder and Head of AI at IPercept, developing industrial software for predictive maintenance. He applies research-engineering skills from KTH to design industrial AI products and IIoT systems that help manufacturers understand and predict machine behavior, from embedded hardware to scalable cloud systems."
     },
     {
       name: "Máire O’Neill",
