@@ -106,7 +106,7 @@ const CONTENT = {
   /* ---- 06 · Submit ---- */
   submit: {
     heading: "Submit your work",
-    text: "4 to 7 pages plus references, NeurIPS format, double-blind. Non-archival — recent and concurrent submissions welcome.",
+    text: "Up to 4 pages plus references, NeurIPS format, double-blind. Non-archival — recent and concurrent submissions welcome.",
     buttonLabel: "Open call on OpenReview →",
     buttonUrl: "#"   /* <-- paste the OpenReview link here when you have it */
   },
@@ -140,6 +140,14 @@ const CONTENT = {
       status: "confirmed",
       talk: "S.A.F.E. AI evaluation models for time series data",
       bio: "Originator of the Sustainability, Accuracy, Fairness, Explainability (S.A.F.E.) AI framework and a leading expert in explainable, trustworthy AI for high-stakes domains. His talk presents a mathematically consistent approach to AI risk management grounded in the Lorenz Curve and Gini index, giving commensurable metrics applicable to any model and data type — from credit lending to medical imaging, judicial decisions, and cyber-risk detection."
+    },
+    {
+      name: "Peter Troll",
+      role: "Co-founder & Head of AI, IPercept",
+      photo: "speakers/troll.jpg",
+      status: "tentative",
+      talk: "",
+      bio: "Co-founder and Head of AI at IPercept, developing industrial software for predictive maintenance. He applies research-engineering skills from KTH to design industrial AI products and IIoT systems that help manufacturers understand and predict machine behavior, from embedded hardware to scalable cloud systems."
     },
     {
       name: "Máire O’Neill",
