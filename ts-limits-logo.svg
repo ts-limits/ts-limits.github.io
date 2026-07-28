@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="112" viewBox="0 0 420 112" fill="none" role="img" aria-label="TS-LIMITS">
+  <!-- Monochrome: everything inherits currentColor. Override with CSS `color`. -->
+  <g fill="currentColor" stroke="currentColor" color="#1e1b4b">
+    <!-- the limit line: the stable bound the signal converges to -->
+    <rect x="6" y="40.3" width="408" height="3.4" rx="1.7" stroke="none" opacity=".9"/>
+    <!-- time-series signal: starts HIGH, decreases with damped volatility, converges to the limit -->
+    <path d="M6,12 L26,30 L44,16 L64,40 L82,26 L102,44 L120,36 L138,43 L156,41 L170,42 L414,42"
+          fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- contact node where the signal converges onto its limit -->
+    <circle cx="170" cy="42" r="4.6" stroke="none"/>
+    <!-- wordmark -->
+    <text x="5" y="100" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-weight="800"
+          font-size="40" letter-spacing="-0.5" fill="currentColor" stroke="none">TS-LIMITS</text>
+  </g>
+</svg>

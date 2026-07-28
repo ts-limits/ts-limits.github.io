@@ -10,15 +10,16 @@ const CONTENT = {
 
   /* ---- Countdown target: submission deadline ----
      Format: year, month (1-12), day, hour (24h), minute — in AoE (UTC-12). */
-  deadline: { year: 2026, month: 8, day: 29, hour: 23, minute: 59 },
+  deadline: { year: 2026, month: 8, day: 28, hour: 23, minute: 59 },
 
-  /* ---- Banner overlay ---- */
+  /* ---- Banner overlay ----
+     A meta item can optionally include a 'url' — it becomes a link (used for the venue map). */
   meta: [
-    { k: "Venue",            v: "NeurIPS 2026 @ Paris" },
+    { k: "Venue",            v: "NeurIPS 2026 · Paris", url: "https://www.google.com/maps/search/?api=1&query=2+Place+de+la+Porte+Maillot,+75017+Paris" },
     { k: "Format",           v: "One-day workshop" },
-    { k: "Submissions open", v: "Aug 10" }
+    { k: "Submissions open", v: "Aug 3, 2026" }
   ],
-  countdownLabel: "Submission deadline<br>Aug 29, 2026",
+  countdownLabel: "Submission deadline<br>Aug 28, 2026",
 
   /* ---- 01 · The challenge (each string is one paragraph) ---- */
   about: [
@@ -64,13 +65,43 @@ const CONTENT = {
   /* ---- 05 · Important dates ----
      'hl: true' highlights a row (the hard deadline). */
   dates: [
-    { date: "Aug 10, 2026", what: "Submissions open",              tag: "OpenReview" },
-    { date: "Aug 29, 2026", what: "Submission deadline",           tag: "Hard", hl: true },
-    { date: "Sep 26, 2026", what: "Author notification",           tag: "Decisions" },
-    { date: "Oct 24, 2026", what: "Camera-ready deadline",         tag: "Final" },
+    { date: "Aug 3, 2026",  what: "Submissions open",              tag: "OpenReview" },
+    { date: "Aug 28, 2026", what: "Submission deadline",           tag: "Hard", hl: true },
+    { date: "Sep 29, 2026", what: "Author notification",           tag: "Decisions" },
+    { date: "TBD",          what: "Camera-ready deadline",         tag: "Final" },
     { date: "Dec 2026",     what: "Workshop day · NeurIPS 2026",   tag: "Program" }
   ],
   datesNote: "All deadlines 23:59 AoE. Dates tentative — confirm on OpenReview.",
+
+  /* ---- Venue (shown in the Overview sidebar with an embedded map) ---- */
+  venue: {
+    name: "Palais des Congrès de Paris",
+    address: "2 Place de la Porte Maillot, 75017 Paris, France",
+    /* Google Maps embed URL. This 'q=' form needs no API key. */
+    mapEmbed: "https://www.google.com/maps?q=2+Place+de+la+Porte+Maillot,+75017+Paris&output=embed",
+    mapLink: "https://www.google.com/maps/search/?api=1&query=2+Place+de+la+Porte+Maillot,+75017+Paris"
+  },
+
+  /* ---- Program / schedule ----
+     kind controls the accent: "keynote", "oral", "poster", "break", "panel", "plain". */
+  scheduleIntro: "A one-day program (≈8 hours) blending invited keynotes, contributed orals, poster sessions, and a cross-community panel.",
+  schedule: [
+    { time: "8:30",  title: "Introduction",                     kind: "plain" },
+    { time: "8:45",  title: "Keynote 1",                        kind: "keynote" },
+    { time: "9:20",  title: "Oral session 1 (2 orals)",         kind: "oral" },
+    { time: "10:00", title: "Coffee break",                     kind: "break" },
+    { time: "10:20", title: "Keynote 2",                        kind: "keynote" },
+    { time: "10:55", title: "Oral session 2 (2 orals)",         kind: "oral" },
+    { time: "11:25", title: "Poster session 1",                 kind: "poster" },
+    { time: "12:25", title: "Lunch break",                      kind: "break" },
+    { time: "13:25", title: "Keynote 3",                        kind: "keynote" },
+    { time: "14:00", title: "Oral session 3 (2 orals)",         kind: "oral" },
+    { time: "14:30", title: "Poster session 2",                 kind: "poster" },
+    { time: "15:30", title: "Keynote 4",                        kind: "keynote" },
+    { time: "16:05", title: "Panel session",                    kind: "panel" },
+    { time: "17:05", title: "Concluding remarks",               kind: "plain" },
+    { time: "17:20", title: "Social event",                     kind: "break" }
+  ],
 
   /* ---- 06 · Submit ---- */
   submit: {
@@ -137,7 +168,20 @@ const CONTENT = {
     { name: "June Sallou", aff: "Wageningen University", photo: "organizers/sallou.jpg",
       bio: "Assistant Professor in Sustainable Software Engineering, leading the Green Computing Track on making scientific software and AI systems more energy-efficient and environmentally responsible." }
   ],
-  contactEmail: "aurelie.boisbunon@ericsson.com",
+  contactEmail: "tslimits.workshop.neurips2026@gmail.com",
+
+  /* ---- Sponsors ----
+     Drop logos into a /sponsors folder (e.g. sponsors/ericsson.svg or .png).
+     'tier' groups them (e.g. "Organizing partners", "Gold", "Silver").
+     'url' is optional. If the logo image is missing, the name shows as text.
+     Leave the array empty ([]) to hide the section entirely. */
+  sponsorsIntro: "TS-LIMITS is made possible by the support of our partners.",
+  sponsors: [
+    { name: "Ericsson", tier: "Organizing partners", logo: "sponsors/ericsson.svg", url: "https://www.ericsson.com" },
+    { name: "Intel",    tier: "Organizing partners", logo: "sponsors/intel.svg",    url: "https://www.intel.com" }
+  ],
+  /* Optional CTA under the sponsor logos. Set to "" to hide. */
+  sponsorCTA: "Interested in sponsoring TS-LIMITS? Get in touch —",
 
   /* ---- Tagline (shown in the organizers section footer) ---- */
   tagline: "The best time series models can’t run where they’re needed most — let’s fix that."

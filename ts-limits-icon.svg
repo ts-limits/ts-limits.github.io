@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" fill="none" role="img" aria-label="TS-LIMITS icon">
+  <g color="#1e1b4b">
+    <rect x="0" y="0" width="128" height="128" rx="26" fill="currentColor"/>
+    <g stroke="#ffffff" fill="#ffffff">
+      <!-- limit line the signal converges to -->
+      <rect x="26" y="74" width="76" height="4.5" rx="2.25" stroke="none" opacity=".9"/>
+      <!-- signal: starts high, decreases with damped volatility, converges onto the limit -->
+      <path d="M26,42 L44,68 L60,50 L78,76 L92,66 L106,76"
+            fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="106" cy="76" r="6.5" stroke="none"/>
+    </g>
+  </g>
+</svg>

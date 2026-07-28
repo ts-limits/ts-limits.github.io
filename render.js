@@ -7,9 +7,13 @@
   const $ = (id) => document.getElementById(id);
   const esc = (s) => s; // content is trusted (authored by you), HTML allowed
 
-  /* ---- banner meta chips ---- */
-  $('meta-chips').innerHTML = CONTENT.meta
-    .map(m => `<span class="chip"><b>${m.k}</b> · ${m.v}</span>`).join('');
+  /* ---- banner meta chips (optionally linked, e.g. venue → map) ---- */
+  $('meta-chips').innerHTML = CONTENT.meta.map(m => {
+    const inner = `<b>${m.k}</b> · ${m.v}`;
+    return m.url
+      ? `<a class="chip chip-link" href="${m.url}" target="_blank" rel="noopener">${inner}<span class="chip-map">↗</span></a>`
+      : `<span class="chip">${inner}</span>`;
+  }).join('');
   $('cd-label').innerHTML = CONTENT.countdownLabel;
 
   /* ---- 01 about ---- */
@@ -34,6 +38,34 @@
     `<div class="tl-row${d.hl ? ' hl' : ''}"><span class="tl-date">${d.date}</span>` +
     `<span class="tl-what">${d.what}</span><span class="tl-tag">${d.tag}</span></div>`).join('');
   $('dates-note').innerHTML = CONTENT.datesNote;
+
+  /* ---- venue (Overview sidebar) ---- */
+  if (CONTENT.venue && $('venue-info')) {
+    const v = CONTENT.venue;
+    $('venue-info').innerHTML =
+      (v.name ? `<div class="venue-name">${v.name}</div>` : '') +
+      (v.address
+        ? `<a class="venue-addr" href="${v.mapLink || '#'}" target="_blank" rel="noopener">${v.address}</a>`
+        : '');
+    if (v.mapEmbed && $('venue-map')) {
+      $('venue-map').innerHTML =
+        `<iframe src="${v.mapEmbed}" loading="lazy" referrerpolicy="no-referrer-when-downgrade" ` +
+        `title="Map — ${v.name || 'venue'}" allowfullscreen></iframe>`;
+    }
+  }
+
+  /* ---- 07 program / schedule ---- */
+  if (CONTENT.schedule && $('schedule-rows')) {
+    if (CONTENT.scheduleIntro) $('schedule-intro').innerHTML = CONTENT.scheduleIntro;
+    $('schedule-rows').innerHTML = CONTENT.schedule.map(s =>
+      `<div class="sch-row sch-${s.kind || 'plain'}">` +
+      `<span class="sch-time">${s.time}</span>` +
+      `<span class="sch-dot"></span>` +
+      `<span class="sch-title">${s.title}</span>` +
+      (s.kind && s.kind !== 'plain' && s.kind !== 'break'
+        ? `<span class="sch-tag">${s.kind}</span>` : '') +
+      `</div>`).join('');
+  }
 
   /* ---- 06 submit ---- */
   $('submit-h').textContent = CONTENT.submit.heading;
@@ -83,6 +115,42 @@
   $('org-contact').innerHTML = `Contact: <a href="${mail}">${CONTENT.contactEmail}</a>`;
   $('foot-email').href = mail;
   if (CONTENT.tagline) $('tagline').textContent = CONTENT.tagline;
+
+  /* ---- 09 sponsors ---- */
+  const sponsorsEl = $('sponsors-groups');
+  if (sponsorsEl) {
+    const list = CONTENT.sponsors || [];
+    const section = document.getElementById('sponsors');
+    if (!list.length) {
+      if (section) section.style.display = 'none';        // hide section if no sponsors
+    } else {
+      if (CONTENT.sponsorsIntro) $('sponsors-intro').innerHTML = CONTENT.sponsorsIntro;
+      // group by tier, preserving first-seen order
+      const tiers = [];
+      const byTier = {};
+      list.forEach(s => {
+        const t = s.tier || 'Partners';
+        if (!byTier[t]) { byTier[t] = []; tiers.push(t); }
+        byTier[t].push(s);
+      });
+      const logoCell = (s) => {
+        const inner =
+          `<img src="${s.logo}" alt="${s.name}" loading="lazy" ` +
+          `onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">` +
+          `<span class="sp-name" style="display:none;">${s.name}</span>`;
+        return s.url
+          ? `<a class="sp-logo" href="${s.url}" target="_blank" rel="noopener" title="${s.name}">${inner}</a>`
+          : `<div class="sp-logo" title="${s.name}">${inner}</div>`;
+      };
+      sponsorsEl.innerHTML = tiers.map(t =>
+        `<div class="sp-tier"><div class="sp-tier-label">${t}</div>` +
+        `<div class="sp-row">${byTier[t].map(logoCell).join('')}</div></div>`).join('');
+      if (CONTENT.sponsorCTA) {
+        $('sponsor-cta').innerHTML =
+          `${CONTENT.sponsorCTA} <a href="mailto:${CONTENT.contactEmail}">${CONTENT.contactEmail}</a>`;
+      }
+    }
+  }
 
   /* ---- scroll reveal ---- */
   const io = new IntersectionObserver((es) => {
