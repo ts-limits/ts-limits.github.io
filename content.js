@@ -10,7 +10,7 @@ const CONTENT = {
 
   /* ---- Countdown target: submission deadline ----
      Format: year, month (1-12), day, hour (24h), minute — in AoE (UTC-12). */
-  deadline: { year: 2026, month: 8, day: 28, hour: 23, minute: 59 },
+  deadline: { year: 2026, month: 9, day: 5, hour: 23, minute: 59 },
 
   /* ---- Banner overlay ----
      A meta item can optionally include a 'url' — it becomes a link (used for the venue map). */
@@ -65,8 +65,8 @@ const CONTENT = {
   /* ---- 05 · Important dates ----
      'hl: true' highlights a row (the hard deadline). */
   dates: [
-    { date: "Aug 3, 2026",  what: "Submissions open",              tag: "OpenReview" },
-    { date: "Aug 28, 2026", what: "Submission deadline",           tag: "Hard", hl: true },
+    { date: "Aug 03, 2026",  what: "Submissions open",             tag: "OpenReview" },
+    { date: "Sep 05, 2026", what: "Submission deadline",           tag: "Hard", hl: true },
     { date: "Sep 29, 2026", what: "Author notification",           tag: "Decisions" },
     { date: "TBD",          what: "Camera-ready deadline",         tag: "Final" },
     { date: "Dec 2026",     what: "Workshop day · NeurIPS 2026",   tag: "Program" }
@@ -163,7 +163,7 @@ const CONTENT = {
       bio: "Director of Research and Innovation at Intel. Expertise in wireless systems, HW-optimization of AI/ML, and standardization; 130+ publications and an extensive workshop-organization record." },
     { name: "Elisa Fromont", aff: "Université de Rennes / IRISA", photo: "organizers/fromont.jpg",
       bio: "Professor at Université de Rennes, leading the Inria MALT team (Machine Learning with Temporal Constraints). Extensive event-organization record across ECML PKDD, IDA, and ICML." },
-    { name: "Fabio Bonassi", aff: "Uppsala University", photo: "organizers/bonassi.jpg",
+    { name: "Fabio Bonassi", aff: "Uppsala University", photo: "organizers/bonassi.png",
       bio: "Postdoctoral researcher in Machine Learning (Ph.D., Politecnico di Milano). Focuses on deep learning for time series and dynamical-systems identification, including ECG classification." },
     { name: "June Sallou", aff: "Wageningen University", photo: "organizers/sallou.jpg",
       bio: "Assistant Professor in Sustainable Software Engineering, leading the Green Computing Track on making scientific software and AI systems more energy-efficient and environmentally responsible." }
