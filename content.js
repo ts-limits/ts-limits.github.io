@@ -19,7 +19,7 @@ const CONTENT = {
     { k: "Format",           v: "One-day workshop" },
     { k: "Submissions open", v: "Aug 3, 2026" }
   ],
-  countdownLabel: "Submission deadline<br>Aug 28, 2026",
+  countdownLabel: "Submission deadline<br>Sep 05, 2026",
 
   /* ---- 01 · The challenge (each string is one paragraph) ---- */
   about: [
