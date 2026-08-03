@@ -108,7 +108,7 @@ const CONTENT = {
     heading: "Submit your work",
     text: "4 to 7 pages plus references, NeurIPS format, double-blind. Non-archival — recent and concurrent submissions welcome.",
     buttonLabel: "Open call on OpenReview →",
-    buttonUrl: "#"   /* <-- paste the OpenReview link here when you have it */
+    buttonUrl: "https://openreview.net/group?id=NeurIPS.cc/2026/Workshop/TS-LIMITS#tab-your-consoles"
   },
 
   /* ---- Keynote speakers ----
@@ -177,6 +177,7 @@ const CONTENT = {
      Leave the array empty ([]) to hide the section entirely. */
   sponsorsIntro: "TS-LIMITS is made possible by the support of our partners.",
   sponsors: [
+    { name: "ANR",      tier: "Funding partners",    logo: "sponsors/anr.png",     url: "https://anr.fr" },
     { name: "Ericsson", tier: "Organizing partners", logo: "sponsors/ericsson.svg", url: "https://www.ericsson.com" },
     { name: "Intel",    tier: "Organizing partners", logo: "sponsors/intel.svg",    url: "https://www.intel.com" }
   ],
