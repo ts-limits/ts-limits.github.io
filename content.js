@@ -155,7 +155,7 @@ const CONTENT = {
      photo: path to an image in the /organizers folder (e.g. organizers/boisbunon.jpg).
      A placeholder with initials shows until you upload the image. */
   organizers: [
-    { name: "Aurélie Boisbunon", aff: "Ericsson Research", photo: "organizers/boisbunon.jpg",
+    { name: "Aurélie Boisbunon", aff: "Ericsson Research", photo: "organizers/boisbunon2.jpg",
       bio: "AI Researcher applying ML to telecommunication data; brings firsthand experience with real-world deployment constraints. Ph.D. in Applied Mathematics, University of Rouen." },
     { name: "Rémi Emonet", aff: "Université de Lyon / Jean Monnet", photo: "organizers/emonet.jpg",
       bio: "Professor at Jean Monnet University and member of the Institut Universitaire de France. Works on Machine Learning, Optimal Transport, and Computer Vision." },
