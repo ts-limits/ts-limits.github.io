@@ -159,7 +159,7 @@ const CONTENT = {
       bio: "AI Researcher applying ML to telecommunication data; brings firsthand experience with real-world deployment constraints. Ph.D. in Applied Mathematics, University of Rouen." },
     { name: "Rémi Emonet", aff: "Université de Lyon / Jean Monnet", photo: "organizers/emonet.jpg",
       bio: "Professor at Jean Monnet University and member of the Institut Universitaire de France. Works on Machine Learning, Optimal Transport, and Computer Vision." },
-    { name: "Valerio Frascolla", aff: "Intel Germany", photo: "organizers/frascolla.jpg",
+    { name: "Valerio Frascolla", aff: "Intel Germany", photo: "organizers/frascolla2.jpg",
       bio: "Director of Research and Innovation at Intel. Expertise in wireless systems, HW-optimization of AI/ML, and standardization; 130+ publications and an extensive workshop-organization record." },
     { name: "Elisa Fromont", aff: "Université de Rennes / IRISA", photo: "organizers/fromont.jpg",
       bio: "Professor at Université de Rennes, leading the Inria MALT team (Machine Learning with Temporal Constraints). Extensive event-organization record across ECML PKDD, IDA, and ICML." },
