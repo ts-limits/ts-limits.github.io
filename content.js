@@ -29,13 +29,13 @@ const CONTENT = {
   ],
 
   /* ---- 02 · Where the constraints bite ---- */
-  domainsIntro: "The same constraints recur across domains: privacy prevents sharing data across sites for retraining, memory limits the historical context that can be retained, and latency rules out expensive online adaptation. The coupling is stronger for streaming time series — where non-stationarity and concept drift interact — than for static vision or language, where the distribution is more stable at inference time.",
-  domains. Examples include: [
+  domainsIntro: "The same constraints recur across domains: privacy prevents sharing data across sites for retraining, memory limits the historical context that can be retained, and latency rules out expensive online adaptation. The coupling is stronger for streaming time series — where non-stationarity and concept drift interact — than for static vision or language, where the distribution is more stable at inference time. Examples include:",
+  domains: [
     { title: "Communications",        text: "Radio stations predicting handover failures from signal time series in under 10 ms, with minimal labels, under privacy and energy budgets." },
     { title: "Healthcare monitoring", text: "Wearables detecting arrhythmias or hypoglycemic episodes under tight memory and power limits, without transmitting patient data." },
     { title: "Industrial IoT",        text: "Predictive maintenance spotting early fault signatures from vibration or temperature sensors, with few labeled failures, on edge hardware." },
     { title: "Finance",               text: "Scarce samples of rare market events and non-stationary regimes driving distribution shift, under strict privacy on sensitive positions and strategies." },
-    { title: "Energy",                text: "Real-time alerts for energy outages or unusual draw from high volumes of data, per device, meter, or circuit." },
+    { title: "Energy",                text: "Real-time alerts for energy outages or unusual draw from high volumes of data, per device, meter, or circuit." }
   ],
 
   /* ---- 03 · Call for papers — five bottlenecks ----
