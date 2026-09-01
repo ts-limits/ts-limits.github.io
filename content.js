@@ -69,7 +69,7 @@ const CONTENT = {
     { date: "Aug 03, 2026",  what: "Submissions open",             tag: "OpenReview" },
     { date: "Sep 05, 2026", what: "Submission deadline",           tag: "Hard", hl: true },
     { date: "Sep 29, 2026", what: "Author notification",           tag: "Decisions" },
-    { date: "TBD",          what: "Camera-ready deadline",         tag: "Final" },
+    { date: "Oct 04, 2026", what: "Camera-ready deadline",         tag: "Final" },
     { date: "Dec 2026",     what: "Workshop day · NeurIPS 2026",   tag: "Program" }
   ],
   datesNote: "All deadlines 23:59 AoE. Dates tentative — confirm on OpenReview.",
@@ -107,7 +107,7 @@ const CONTENT = {
   /* ---- 06 · Submit ---- */
   submit: {
     heading: "Submit your work",
-    text: "4 to 7 pages plus references, NeurIPS format, double-blind. Non-archival — recent and concurrent submissions welcome.",
+    text: "4 to 7 pages main text (extra pages for references and appendix), NeurIPS format, double-blind. Non-archival — recent and concurrent submissions welcome.",
     buttonLabel: "Open call on OpenReview →",
     buttonUrl: "https://openreview.net/group?id=NeurIPS.cc/2026/Workshop/TS-LIMITS#tab-your-consoles"
   },
