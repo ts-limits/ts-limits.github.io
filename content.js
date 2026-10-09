@@ -15,7 +15,7 @@ const CONTENT = {
   /* ---- Banner overlay ----
      A meta item can optionally include a 'url' — it becomes a link (used for the venue map). */
   meta: [
-    { k: "Venue",            v: "NeurIPS 2026 · Paris", url: "" }, /*"https://www.google.com/maps/search/?api=1&query=2+Place+de+la+Porte+Maillot,+75017+Paris" },*/
+    { k: "Venue",            v: "NeurIPS 2026 · Paris", url: "https://maps.app.goo.gl/g277VERtpUigbdqj9" }, /*"https://www.google.com/maps/search/?api=1&query=2+Place+de+la+Porte+Maillot,+75017+Paris" },*/
     { k: "Format",           v: "One-day workshop" },
     { k: "Submissions open", v: "Aug 3, 2026" }
   ],
@@ -70,17 +70,17 @@ const CONTENT = {
     { date: "Sep 05, 2026", what: "Submission deadline",           tag: "Hard", hl: true },
     { date: "Sep 29, 2026", what: "Author notification",           tag: "Decisions" },
     { date: "Oct 04, 2026", what: "Camera-ready deadline",         tag: "Final" },
-    { date: "Dec 2026",     what: "Workshop day · NeurIPS 2026",   tag: "Program" }
+    { date: "Dec 13, 2026",     what: "Workshop day · NeurIPS 2026",   tag: "Program" }
   ],
   datesNote: "All deadlines 23:59 AoE. Dates tentative — confirm on OpenReview.",
 
   /* ---- Venue (shown in the Overview sidebar with an embedded map) ---- */
   venue: {
-    name: "TBD", /*Palais des Congrès de Paris",*/
-    address: "", /*2 Place de la Porte Maillot, 75017 Paris, France",*/
+    name: "Sorbonne University (Jussieu)", /*Palais des Congrès de Paris",*/
+    address: "4 Pl. Jussieu, 75005 Paris", /*2 Place de la Porte Maillot, 75017 Paris, France",*/
     /* Google Maps embed URL. This 'q=' form needs no API key. */
-    /*mapEmbed: "https://www.google.com/maps?q=2+Place+de+la+Porte+Maillot,+75017+Paris&output=embed",
-    mapLink: "https://www.google.com/maps/search/?api=1&query=2+Place+de+la+Porte+Maillot,+75017+Paris"*/
+    mapEmbed: "https://www.google.com/maps/place/Sorbonne+University+Pierre+and+Marie+Curie+Campus&output=embed",
+    mapLink: "https://maps.app.goo.gl/g277VERtpUigbdqj9"
   },
 
   /* ---- Program / schedule ----
@@ -143,12 +143,12 @@ const CONTENT = {
       bio: "Originator of the Sustainability, Accuracy, Fairness, Explainability (S.A.F.E.) AI framework and a leading expert in explainable, trustworthy AI for high-stakes domains. His talk presents a mathematically consistent approach to AI risk management grounded in the Lorenz Curve and Gini index, giving commensurable metrics applicable to any model and data type — from credit lending to medical imaging, judicial decisions, and cyber-risk detection."
     },
     {
-      name: "Máire O’Neill",
-      role: "Professor, Queen’s University Belfast",
-      photo: "speakers/oneill.jpg",
-      status: "tentative",
+      name: "Evangelia Gogoulou",
+      role: "Senior Data Scientist at SEBx",
+      photo: "speakers/gogoulou.jpg",
+      status: "confirmed",
       talk: "",
-      bio: "Fellow of the Royal Academy of Engineering, widely recognized for expertise in cryptography, hardware security, and post-quantum cryptography. Her work is a natural reference for privacy-preserving ML at the edge, where privacy and security must hold under strict computational and memory budgets."
+      bio: "A specialist in sequential modeling, robustness, and the real-world evaluation of AI systems, now Senior Data Scientist at SEBx building AI for financial applications; she holds a PhD in NLP from KTH Royal Institute of Technology, where she worked on large-scale multilingual language models, pre-training strategies, and mitigating hallucinations in machine-generated content."
     }
   ],
 
