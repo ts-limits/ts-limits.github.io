@@ -85,23 +85,22 @@ const CONTENT = {
 
   /* ---- Program / schedule ----
      kind controls the accent: "keynote", "oral", "poster", "break", "panel", "plain". */
-  scheduleIntro: "A one-day program (≈8 hours) blending invited keynotes, contributed orals, poster sessions, and a cross-community panel.",
+  scheduleIntro: "A one-day program (≈8 hours) blending invited keynotes, contributed orals, poster sessions, and cross-community discussions.",
   schedule: [
-    { time: "8:30",  title: "Introduction",                     kind: "plain" },
-    { time: "8:45",  title: "Keynote 1",                        kind: "keynote" },
-    { time: "9:20",  title: "Oral session 1 (2 orals)",         kind: "oral" },
-    { time: "10:00", title: "Coffee break",                     kind: "break" },
-    { time: "10:20", title: "Keynote 2",                        kind: "keynote" },
-    { time: "10:55", title: "Oral session 2 (2 orals)",         kind: "oral" },
-    { time: "11:25", title: "Poster session 1",                 kind: "poster" },
-    { time: "12:25", title: "Lunch break",                      kind: "break" },
-    { time: "13:25", title: "Keynote 3",                        kind: "keynote" },
-    { time: "14:00", title: "Oral session 3 (2 orals)",         kind: "oral" },
-    { time: "14:30", title: "Poster session 2",                 kind: "poster" },
-    { time: "15:30", title: "Keynote 4",                        kind: "keynote" },
-    { time: "16:05", title: "Panel session",                    kind: "panel" },
-    { time: "17:05", title: "Concluding remarks",               kind: "plain" },
-    { time: "17:20", title: "Social event",                     kind: "break" }
+    { time: "9:00", title: "Opening / Introductory remarks", kind: "plain" },
+    { time: "9:10", title: "Keynote 1: Joao Gama, A Neuro-symbolic approach for explaining Rare Events", kind: "keynote" },
+    { time: "9:50", title: "Oral session 1 (2 talks)", kind: "oral" },
+    { time: "10:10", title: "Coffee / Poster session 1", kind: "poster" },
+    { time: "11:30", title: "Keynote 2: Evangelia Gogoulou, Modeling Financial Time Series Under Real-World Constraints", kind: "keynote" },
+    { time: "12:10", title: "Oral session 2 (2 talks)", kind: "oral" },
+    { time: "12:30", title: "Lunch break", kind: "lunch" },
+    { time: "14:00", title: "Keynote 3: Thea Aarestad, Machine Learning at the Edge of Scale and Speed", kind: "keynote" },
+    { time: "14:40", title: "Oral session 3 (2 talks)", kind: "oral" },
+    { time: "15:00", title: "Short break - no coffee provided", kind: "break" },
+    { time: "15:10", title: "Keynote 4: Paolo Giudici, SAFE AI evaluation models", kind: "keynote" },
+    { time: "15:50", title: "Oral session 4 (2 talks)", kind: "oral" },
+    { time: "16:10", title: "Concluding remarks", kind: "plain" },
+    { time: "16:20", title: "Coffee / Poster session 2", kind: "poster" },
   ],
 
   /* ---- 06 · Submit ---- */
