@@ -123,7 +123,7 @@ const CONTENT = {
       role: "Professor, University of Porto",
       photo: "speakers/gama.jpg",
       status: "confirmed",
-      talk: "A Neuro-symbolic approach for explaining Rare Events",
+      talk: "A Neuro-symbolic Approach for Explaining Rare Events",
       bio: "A leading figure in ML for dynamic and non-stationary environments, with 30+ years in data stream mining, concept drift detection, and adaptive learning; author of <i>Knowledge Discovery from Data Streams</i>. His talk presents a two-layer online architecture pairing unsupervised autoencoders (detecting outliers, drifts, anomalies, and failures) with supervised rule-based inference for human-interpretable explanations, shown on a real-world predictive-maintenance case study."
     },
     {
@@ -139,7 +139,7 @@ const CONTENT = {
       role: "Professor, University of Pavia",
       photo: "speakers/giudici.jpg",
       status: "confirmed",
-      talk: "S.A.F.E. AI evaluation models for time series data",
+      talk: "S.A.F.E. AI Evaluation Models for Time Series Data",
       bio: "Originator of the Sustainability, Accuracy, Fairness, Explainability (S.A.F.E.) AI framework and a leading expert in explainable, trustworthy AI for high-stakes domains. His talk presents a mathematically consistent approach to AI risk management grounded in the Lorenz Curve and Gini index, giving commensurable metrics applicable to any model and data type — from credit lending to medical imaging, judicial decisions, and cyber-risk detection."
     },
     {
@@ -147,8 +147,8 @@ const CONTENT = {
       role: "Senior Data Scientist at SEBx",
       photo: "speakers/gogoulou.jpg",
       status: "confirmed",
-      talk: "",
-      bio: "A specialist in sequential modeling, robustness, and the real-world evaluation of AI systems, now Senior Data Scientist at SEBx building AI for financial applications; she holds a PhD in NLP from KTH Royal Institute of Technology, where she worked on large-scale multilingual language models, pre-training strategies, and mitigating hallucinations in machine-generated content."
+      talk: "Modeling Financial Time Series Under Real-World Constraints",
+      bio: "A specialist in sequential modeling, robustness, and real-world evaluation of AI systems, now Senior Data Scientist at SEBx. Her This talk explores how these constraints impact AI models in finance, discusses market regime identification for understanding changing environments, and examines scenario generation as a way to create realistic market scenarios beyond the available data."
     }
   ],
 
