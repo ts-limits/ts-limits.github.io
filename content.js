@@ -101,6 +101,7 @@ const CONTENT = {
     { time: "15:50", title: "Oral session 4 (2 talks)", kind: "oral" },
     { time: "16:10", title: "Concluding remarks", kind: "plain" },
     { time: "16:20", title: "Coffee / Poster session 2", kind: "poster" },
+    { time: "17:30", title: "Workshop ends", kind: "" },
   ],
 
   /* ---- 06 · Submit ---- */
