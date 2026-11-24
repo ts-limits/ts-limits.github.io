@@ -15,7 +15,7 @@ const CONTENT = {
   /* ---- Banner overlay ----
      A meta item can optionally include a 'url' — it becomes a link (used for the venue map). */
   meta: [
-    { k: "Venue",            v: "NeurIPS 2026 · Paris", url: "https://maps.app.goo.gl/g277VERtpUigbdqj9" }, /*"https://www.google.com/maps/search/?api=1&query=2+Place+de+la+Porte+Maillot,+75017+Paris" },*/
+    { k: "Venue",            v: "NeurIPS 2026 · Paris", url: "https://www.google.com/maps/search/?api=1&query=2+Place+de+la+Porte+Maillot,+75017+Paris" },
     { k: "Format",           v: "One-day workshop" },
     { k: "Submissions open", v: "Aug 3, 2026" }
   ],
@@ -76,11 +76,11 @@ const CONTENT = {
 
   /* ---- Venue (shown in the Overview sidebar with an embedded map) ---- */
   venue: {
-    name: "Sorbonne University (Jussieu)", /*Palais des Congrès de Paris",*/
-    address: "4 Pl. Jussieu, 75005 Paris", /*2 Place de la Porte Maillot, 75017 Paris, France",*/
+    name: "Palais des Congrès de Paris",
+    address: "2 Place de la Porte Maillot, 75017 Paris, France",
     /* Google Maps embed URL. This 'q=' form needs no API key. */
-    mapEmbed: "https://www.google.com/maps/place/Sorbonne+University+Pierre+and+Marie+Curie+Campus&output=embed",
-    mapLink: "https://maps.app.goo.gl/g277VERtpUigbdqj9"
+    mapEmbed: "https://www.google.com/maps?q=2+Place+de+la+Porte+Maillot,+75017+Paris&output=embed",
+    mapLink: "https://maps.app.goo.gl/fjCNVK1e4dTL6Tj96"
   },
 
   /* ---- Program / schedule ----
